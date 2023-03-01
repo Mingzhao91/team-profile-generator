@@ -26,7 +26,7 @@ async function getAnswers(questions) {
 }
 
 // prompt questions about team members to user
-async function promptQuetions() {
+async function gatherTeamMembersInformation() {
   let isFinish = false;
   // get manager information to create a manager
   const managerInfo = await getAnswers(MANAGER_QUESTIONS);
@@ -52,9 +52,11 @@ async function promptQuetions() {
     }
   }
 
-  console.log("managerInfo: ", managerInfo);
-  console.log("engineersInfoArr:", engineersInfoArr);
-  console.log("internsInfoArr: ", internsInfoArr);
+  // console.log("managerInfo: ", managerInfo);
+  // console.log("engineersInfoArr:", engineersInfoArr);
+  // console.log("internsInfoArr: ", internsInfoArr);
+
+  return { managerInfo, engineersInfoArr, internsInfoArr };
 }
 
-promptQuetions();
+gatherTeamMembersInformation();
