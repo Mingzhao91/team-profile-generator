@@ -109,10 +109,25 @@ function createTeamMembers(
   return teamArr;
 }
 
+// create html to show team members
+async function generateHtmlFile(teamArr = []) {
+  try {
+    const htmlStr = render(teamArr);
+    // create output folder if it doesn't exist
+    await fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+    // create the HTML file
+    await fs.writeFileSync(outputPath, htmlStr);
+    console.log(`The HTML file is successfully generated!`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 // immediately run when the application get started
 async function init() {
   const teamMembersInfo = await gatherTeamMembersInformation();
   const teamMembers = createTeamMembers(...Object.values(teamMembersInfo));
+  await generateHtmlFile(teamMembers);
 }
 
 init();
