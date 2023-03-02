@@ -73,7 +73,7 @@ function createTeamMembers(
         managerInfo.name,
         Number.parseInt(managerInfo.id),
         managerInfo.email,
-        managerInfo.officeNumber
+        Number.parseInt(managerInfo.officeNumber)
       )
     );
   }
