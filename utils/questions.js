@@ -70,7 +70,7 @@ const INTERN_QUESTIONS = [
 const MENU_CHOICES = {
   addEngineer: "Add an engineer",
   addIntern: "Add an intern",
-  finish: "Finish builiding the team"
+  finish: "Finish building the team"
 };
 
 const MENU_OPTION_QUESTIONS = [
