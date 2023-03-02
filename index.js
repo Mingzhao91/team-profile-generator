@@ -70,8 +70,8 @@ function createTeamMembers(
   if (managerInfo) {
     teamArr.push(
       new Manager(
-        managerInfo.id,
         managerInfo.name,
+        Number.parseInt(managerInfo.id),
         managerInfo.email,
         managerInfo.officeNumber
       )
@@ -83,8 +83,8 @@ function createTeamMembers(
     engineersInfoArr.forEach((engineerInfo) => {
       teamArr.push(
         new Engineer(
-          engineerInfo.id,
           engineerInfo.name,
+          Number.parseInt(engineerInfo.id),
           engineerInfo.email,
           engineerInfo.githubUserName
         )
@@ -97,8 +97,8 @@ function createTeamMembers(
     internsInfoArr.forEach((internInfo) => {
       teamArr.push(
         new Intern(
-          internInfo.id,
           internInfo.name,
+          Number.parseInt(internInfo.id),
           internInfo.email,
           internInfo.school
         )
