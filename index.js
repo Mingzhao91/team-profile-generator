@@ -59,4 +59,60 @@ async function gatherTeamMembersInformation() {
   return { managerInfo, engineersInfoArr, internsInfoArr };
 }
 
-gatherTeamMembersInformation();
+function createTeamMembers(
+  managerInfo,
+  engineersInfoArr = [],
+  internsInfoArr = []
+) {
+  const teamArr = [];
+
+  // create manager object and push into the team array
+  if (managerInfo) {
+    teamArr.push(
+      new Manager(
+        managerInfo.id,
+        managerInfo.name,
+        managerInfo.email,
+        managerInfo.officeNumber
+      )
+    );
+  }
+
+  // loop through engineersInfoArr, craate engineer objects and push them into the team array
+  if (engineersInfoArr.length > 0) {
+    engineersInfoArr.forEach((engineerInfo) => {
+      teamArr.push(
+        new Engineer(
+          engineerInfo.id,
+          engineerInfo.name,
+          engineerInfo.email,
+          engineerInfo.githubUserName
+        )
+      );
+    });
+  }
+
+  // loop through internsInfoArr, craate intern objects and push them into the team array
+  if (internsInfoArr.length > 0) {
+    internsInfoArr.forEach((internInfo) => {
+      teamArr.push(
+        new Intern(
+          internInfo.id,
+          internInfo.name,
+          internInfo.email,
+          internInfo.school
+        )
+      );
+    });
+  }
+
+  return teamArr;
+}
+
+// immediately run when the application get started
+async function init() {
+  const teamMembersInfo = await gatherTeamMembersInformation();
+  const teamMembers = createTeamMembers(...Object.values(teamMembersInfo));
+}
+
+init();
