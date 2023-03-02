@@ -1,0 +1,28 @@
+.jumbotron {
+  background: #e84756;
+}
+
+h1,
+.card-title {
+  color: #ffffff;
+}
+
+/* allow items to go into next line if spaces aren't enough */
+.team-area {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* set minimum width for card and give it a box shadow */
+.card {
+  min-width: 300px;
+  box-shadow: 5px 5px 10px #cdcdcd;
+}
+
+.card-header {
+  background: #0077f7;
+}
+
+.card-body {
+  background: #f6f7f9;
+}
