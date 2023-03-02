@@ -1,5 +1,10 @@
-function isValidString(str) {
-  return typeof str === "string" || str instanceof String;
+function isString(val) {
+  return typeof val === "string" || val instanceof String;
 }
 
-exports.isValidString = isValidString;
+function isInteger(val) {
+  return Number.isInteger(val);
+}
+
+exports.isString = isString;
+exports.isInteger = isInteger;
