@@ -34,7 +34,7 @@ User is prompted a series of questions about employees of a team in order to wri
 
 ### Generate File
 
-After answering questions in the terminal, a HTML file is generated inside the output folder.
+After answering questions in the terminal, an HTML file is generated inside the output folder.
 
 ![Generate REAMDE File](./assets/screenshots/team_html.png)
 <br />
@@ -58,7 +58,7 @@ node index.js
 
 ## Deployment
 
-After providing all employees information in the command line, an HTML file about the team is created inside the output folder. <a href="https://github.com/Mingzhao91/team-profile-generator/blob/main/output/team.html" target="_blank">Here</a> is the of an generated HTML file.
+After providing all employees information in the command line, an HTML file about the team is created inside the output folder. <a href="https://github.com/Mingzhao91/team-profile-generator/blob/main/output/team.html" target="_blank">Here</a> is an example of a generated HTML file.
 <br/>
 
 ## Authors
